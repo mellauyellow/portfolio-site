@@ -3,6 +3,8 @@ $yellow: #FCC22F;
 $lightGrey: #D3D0CB;
 $platinum: #E7E5DF;
 $green: #44BBA4;
+$boldFont: 'Alfa Slab One', cursive;
+$lightFont: 'Vollkorn', serif;
 
 body, div, h1, h2, h3, h4, h5, h6, a, button, img, input {
   margin: 0px;
@@ -20,7 +22,6 @@ body, div, h1, h2, h3, h4, h5, h6, a, button, img, input {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  // height: 600px;
   position: relative;
 }
 
@@ -32,12 +33,11 @@ body, div, h1, h2, h3, h4, h5, h6, a, button, img, input {
   position: absolute;
   background: rgba(255, 255, 255, 0.0);
   width: 100%;
-  // height: 600px;
 }
 
 #splash-transparency h3 {
   font-size: 24px;
-  font-family: 'Vollkorn', serif;
+  font-family: $lightFont;
   font-weight: 400;
   color: $darkGrey;
 }
@@ -45,6 +45,74 @@ body, div, h1, h2, h3, h4, h5, h6, a, button, img, input {
 #splash-transparency h2 {
   font-size: 36px;
   font-weight: 400;
-  font-family: 'Alfa Slab One', cursive;
+  font-family: $boldFont;
   color: $darkGrey;
+}
+
+.down-arrow {
+  position:fixed;
+  left: 50%;
+  bottom: 30px;
+  margin-top: -25px;
+  height: 30px;
+  width: 30px;
+  -webkit-animation: bounce 2s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-20px); }
+  60% {
+    -webkit-transform: translateY(-10px); } }
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0); }
+  40% {
+    -moz-transform: translateY(-20px); }
+  60% {
+    -moz-transform: translateY(-10px); } }
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+    transform: translateY(-20px); }
+  60% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px); } }
+
+.header {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid $lightGrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name h4 {
+  color: $darkGrey;
+  font-family: $boldFont;
+  font-size: 24px;
+}
+
+.navigation-menu {
+  display: flex;
+}
+
+.navigation-menu a {
+  font-family: $boldFont;
+  font-size: 18px;
 }
