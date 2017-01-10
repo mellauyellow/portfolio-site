@@ -80,7 +80,7 @@ body, div, h1, h2, h3, h4, h5, h6, a, button, img, input {
     transform: translateY(-10px); } }
 .header {
   width: 100%;
-  height: 50px;
+  height: 300px;
   border-bottom: 1px solid #D3D0CB;
   display: flex;
   justify-content: space-between;
