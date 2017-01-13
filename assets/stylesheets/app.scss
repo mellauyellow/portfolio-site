@@ -1,18 +1,51 @@
-$darkGrey: #393E41;
+// $darkGrey: #393E41;
+$darkGrey: #011627;
 $yellow: #FCC22F;
 $lightGrey: #D3D0CB;
 $platinum: #E7E5DF;
-$green: #44BBA4;
-$boldFont: 'Alfa Slab One', cursive;
-$lightFont: 'Vollkorn', serif;
+$powder: #FDFFFC;
+// $green: #44BBA4;
+$green: #41EAD4;
+$red: #F71735;
+// $boldFont: 'Alfa Slab One', cursive;
+// $boldFont: 'Source Sans Pro', sans-serif;
+$boldFont: 'Poppins', sans-serif;
+// $boldFont: 'PT Sans', sans-serif;
+// $lightFont: 'Vollkorn', serif;
+$lightFont: 'Roboto Slab', serif;
 
-body, div, h1, h2, h3, h4, h5, h6, a, button, img, input {
+body, div, h1, h2, h3, h4, h5, h6, a, button, img, input, section {
   margin: 0px;
   padding: 0px;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 12px;
 }
 
 #splash-image {
@@ -31,22 +64,22 @@ body, div, h1, h2, h3, h4, h5, h6, a, button, img, input {
   align-items: center;
   justify-content: center;
   position: absolute;
-  background: rgba(255, 255, 255, 0.0);
+  background: rgba(255, 255, 255, 0.1);
   width: 100%;
 }
 
-#splash-transparency h3 {
-  font-size: 24px;
+#splash-transparency h4 {
   font-family: $lightFont;
-  font-weight: 400;
   color: $darkGrey;
+  margin: 5px 0px;
 }
 
 #splash-transparency h2 {
-  font-size: 36px;
-  font-weight: 400;
+  // font-weight: 400;
   font-family: $boldFont;
   color: $darkGrey;
+  // -webkit-text-stroke-width: 1px;
+  // -webkit-text-stroke-color: $lightGrey;
 }
 
 .down-arrow {
@@ -93,26 +126,67 @@ body, div, h1, h2, h3, h4, h5, h6, a, button, img, input {
     -o-transform: translateY(-10px);
     transform: translateY(-10px); } }
 
-.header {
+#header {
   width: 100%;
-  height: 300px;
-  border-bottom: 1px solid $lightGrey;
+  height: 60px;
+  border-bottom: 0.5px solid $platinum;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.fixed {
+  position: fixed;
+  top: 0px;
+}
+
+#nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .name h4 {
   color: $darkGrey;
   font-family: $boldFont;
-  font-size: 24px;
+  font-weight: 700;
 }
 
-.navigation-menu {
+.menu {
   display: flex;
+  width: 50%;
+  justify-content: space-between;
 }
 
-.navigation-menu a {
+.menu h6 {
   font-family: $boldFont;
-  font-size: 18px;
+  text-decoration: none;
+  color: $darkGrey;
+  transition: color 0.3s ease;
+  font-weight: 400;
+}
+
+.menu h6:hover {
+  color: $green;
+  cursor: pointer;
+}
+
+section {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section > h2 {
+  font-family: $boldFont;
+  color: $darkGrey;
+}
+
+.divider {
+  width: 80px;
+  border-bottom: 2px solid $green;
+  margin: 40px 0px;
 }
