@@ -164,14 +164,16 @@ section > h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  overflow: hidden; }
+
+.thumbnail-background:hover > .project-screenshot {
+  transform: scale(1.1, 1.1); }
 
 .project-screenshot {
   width: 250px;
   height: 180px;
   background-size: cover;
-  transition: 0.3s ease; }
-  .project-screenshot:hover {
-    transform: scale(1.1, 1.1); }
+  transition: 0.2s ease; }
 
 /*# sourceMappingURL=app.css.map */
